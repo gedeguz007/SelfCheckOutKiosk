@@ -2,8 +2,8 @@ class MenuItem():
 
     def __init__(self, itemID, itemName, costPerUnit):
         self.itemID  = itemID
+        self.itemName = itemName
         self.costPerUnit = costPerUnit
-        self.subTotal = subTotal
 
     def getitemID(self):
         return self.itemID
