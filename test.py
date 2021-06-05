@@ -41,20 +41,18 @@ class MenuTest (unittest.TestCase):
 class CustomerTest(unittest.TestCase):
 
     def setUp(self):
-        self.customer = Customer(8617, 'Gabe', 'DeGuzman', 'flipzides@yahoo.com', '123-456-7890')
+        self.customer = Customer(8617, 'Gabe DeGuzman', 'flipzides@yahoo.com', '123-456-7890')
 
     def test_customerID(self):
-        self.assertEqual(self.customer.getcustomerID(), 8167)
+        self.assertEqual(self.customer.getcustomerID(), 8617)
 
     def test_customerEmail(self):
         self.assertEqual(self.customer.getcustomerEmail(), 'flipzides@yahoo.com')
 
-    def test_firstName(self):
-        self.assertEqual(self.customer.getfirstName(), 'Gabe')
+    def test_customerName(self):
+        self.assertEqual(self.customer.getcustomerName(), 'Gabe DeGuzman')
     
-    def test_lastName(self):
-        self.assertEqual(self.customer.getlastName(), 'DeGuzman')
-
+    
     def test_customerPhonenumber(self):
         self.assertEqual(self.customer.getcustomerPhonenumber(), '123-456-7890')
 
